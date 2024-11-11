@@ -20,12 +20,12 @@ import sys
 # Load selenium  #
 ###################
 
-emailList =  ["youremai@gmail.com"]
-password = "yourpassword"
+emailList =  ["youremail1@gmail.com", "youremail2@gmail.com"]
+passwordList = ["yourpassword1", "yourpassword2"]
 
 ## get frogs
 while True:
-    for email in emailList:
+    for email, password in zip(emailList, passwordList):
         driver = initializeSelenium()
         try:
             # Load find elements with the default wait
